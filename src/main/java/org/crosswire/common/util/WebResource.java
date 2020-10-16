@@ -225,10 +225,10 @@ public class WebResource {
     public void copy(URI dest, Progress meter) throws LucidException {
         InputStream in = null;
         OutputStream out = null;
-
+        HttpsURLConnection httpsURLConnection = null;
         try {
             // Execute the method.
-            HttpsURLConnection httpsURLConnection = (HttpsURLConnection)uri.toURL().openConnection();
+            httpsURLConnection = (HttpsURLConnection)uri.toURL().openConnection();
             httpsURLConnection.setConnectTimeout(timeout);
             httpsURLConnection.setReadTimeout(timeout);
             // Initialize the meter, if present
