@@ -230,7 +230,7 @@ public class WebResource {
             // Execute the method.
             HttpsURLConnection httpsURLConnection = (HttpsURLConnection)uri.toURL().openConnection();
             httpsURLConnection.setConnectTimeout(timeout);
-            httpsURLConnection.setReadTimeout(timeout);
+            //httpsURLConnection.setReadTimeout(timeout);
             // Initialize the meter, if present
             if (meter != null) {
                 // Find out how big it is
