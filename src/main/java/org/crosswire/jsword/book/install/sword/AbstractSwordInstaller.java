@@ -230,7 +230,7 @@ public abstract class AbstractSwordInstaller extends AbstractBookList implements
 
         // TRANSLATOR: Progress label indicating the installation of a book. {0} is a placeholder for the name of the book.
         String jobName = JSMsg.gettext("Installing book: {0}", sbmd.getName());
-        Progress job = JobManager.createJob(String.format(Progress.INSTALL_BOOK, book.getInitials()), jobName, Thread.currentThread());
+        Progress job = JobManager.createJob(String.format(Progress.INSTALL_BOOK, book.getInitials()), jobName, null);
 
         URI temp = null;
         String fileName = null;
